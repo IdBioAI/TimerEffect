@@ -1,0 +1,10 @@
+{
+  "__name__": "Timer",
+  "__property__.interval": "Interval",
+  "__property__.unit": "Unit",
+  "__property__.repeat": "Repeat",
+  "__property__.onInterval": "On Interval",
+  "__property__.timeState": "Time State",
+  "__property__.titleBtnReset": "Reset Button Title",
+  "__property__.titleBtnToggle": "Toggle Button Title"
+}

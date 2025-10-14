@@ -1,0 +1,10 @@
+{
+  "__name__": "Časovač",
+  "__property__.interval": "Interval",
+  "__property__.unit": "Jednotka",
+  "__property__.repeat": "Opakovat",
+  "__property__.onInterval": "Při dokončení",
+  "__property__.timeState": "Stav času",
+  "__property__.titleBtnReset": "Text tlačítka reset",
+  "__property__.titleBtnToggle": "Text tlačítka start/pauza"
+}

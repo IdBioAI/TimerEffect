@@ -1,0 +1,6 @@
+{
+  "author": "Jaroslav Vonrák",
+  "license": "UNLICENSED",
+  "publishRegistry": "https://registry.npmjs.org/",
+  "scope": "timer-effect"
+}
