@@ -1,0 +1,9 @@
+{
+  "__name__": "Sloupcový graf",
+  "__property__.axisX": "Popisek osy X",
+  "__property__.axisY": "Popisek osy Y", 
+  "__property__.width": "Šířka",
+  "__property__.height": "Výška",
+  "__property__.textRotate": "Otočit text",
+  "__property__.dataset": "Data grafu"
+}

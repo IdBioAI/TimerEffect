@@ -36,3 +36,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 .npmrc
 .yarnrc.yml
 bunfig.toml
+
+.idea/
+*/.idea/
+node_modules/**/.idea/

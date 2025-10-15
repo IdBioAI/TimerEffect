@@ -1,9 +1,9 @@
 // This is a generated file. Do not modify manually.
 import type { PluginDefinition } from '@alfons-app/pdk';
-import pkg1 from '@bory875/effects-timer/editor';
+import pkg1 from '@jaroslav-vondrak/bar-chart/editor';
 
 const packages: { [pkgName: string]: PluginDefinition } = {
-  '@bory875/effects-timer': pkg1,
+  '@jaroslav-vondrak/bar-chart': pkg1,
 } as const;
 
 const resolvablePackages = new Set([]);

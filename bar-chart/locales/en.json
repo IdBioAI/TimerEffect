@@ -1,0 +1,9 @@
+{
+  "__name__": "Bar Chart",
+  "__property__.axisX": "X Axis Label",
+  "__property__.axisY": "Y Axis Label",
+  "__property__.width": "Width",
+  "__property__.height": "Height", 
+  "__property__.textRotate": "Rotate Text",
+  "__property__.dataset": "Chart Data"
+}
