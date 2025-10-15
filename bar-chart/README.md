@@ -46,4 +46,4 @@ Each chart item contains:
 - `label`: Text label displayed on X-axis
 - `color`: Optional custom color (hex format)
 
-[![Ukazkove video](img.png)](video.mp4)
+[![Ukazkove video](img.png)](test.mp4)
