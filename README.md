@@ -9,6 +9,7 @@ Timer Effect Plugin for Alfons framework enables action execution based on time 
 - ⏸️ **Pause/Resume**: Pause and resume countdown
 - 🔄 **Reset**: Restart timer
 - 📤 **Time Export**: Remaining time for external components
+- ⚡ **Debouncer**: 500ms delay prevents premature timer starts during rapid input changes
 
 ## Configuration
 

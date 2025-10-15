@@ -4,6 +4,7 @@ import {Button} from 'react-native';
 import type {Props} from "./editor";
 
 const UPDATE_INTERVAL_MS = 100;
+const DEBOUNCE_DELAY_MS = 500;
 
 const TimerEffect: Effect<Props> = memo((props) => {
     const {getAction} = useContext(ActionContext);
@@ -11,6 +12,7 @@ const TimerEffect: Effect<Props> = memo((props) => {
     // timers ref
     const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const displayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const isRunning = useRef(true);
     const startTime = useRef<number>(0);
@@ -29,6 +31,9 @@ const TimerEffect: Effect<Props> = memo((props) => {
         }
         if (displayTimerRef.current) {
             clearTimeout(displayTimerRef.current);
+        }
+        if (debounceRef.current) {
+            clearTimeout(debounceRef.current);
         }
 
         isRunning.current = false;
@@ -124,7 +129,20 @@ const TimerEffect: Effect<Props> = memo((props) => {
 
     useEffect(() => {
         updateTimeoutValue();
-        resetTimer();
+
+        if (debounceRef.current) {
+            clearTimeout(debounceRef.current);
+        }
+
+        debounceRef.current = setTimeout(() => {
+            resetTimer();
+        }, DEBOUNCE_DELAY_MS);
+        
+        return () => {
+            if (debounceRef.current) {
+                clearTimeout(debounceRef.current);
+            }
+        };
     }, [props.interval, props.unit, props.repeat]);
 
     return (

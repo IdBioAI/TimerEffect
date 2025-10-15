@@ -31,7 +31,7 @@ describe('TimerEffect', () => {
   it('should start timer on mount', () => {
     const setTimeoutSpy = jest.spyOn(global, 'setTimeout');
     render(<TimerEffect {...defaultProps} />);
-    
+
     expect(setTimeoutSpy).toHaveBeenCalledWith(expect.any(Function), 1000);
     setTimeoutSpy.mockRestore();
   });
@@ -56,7 +56,10 @@ describe('TimerEffect', () => {
     // Initially action should not be called
     expect(mockAction).not.toHaveBeenCalled();
     
-    // Advance time by 2 seconds (2000ms)
+    // debounce delay (500ms) to start timer
+    jest.advanceTimersByTime(500);
+    
+    // Then advance timer duration (2000ms) to trigger action
     jest.advanceTimersByTime(2000);
     
     // Action should be called exactly once
