@@ -1,6 +1,5 @@
-import {type PluginDefinition, createSchemaBuilder} from '@alfons-app/pdk';
+import {type PluginDefinition, createSchemaBuilder, zod} from '@alfons-app/pdk';
 import {name} from './package.json';
-import type Zod from 'zod';
 import {TimerRegular} from "@fluentui/react-icons";
 
 const $ = createSchemaBuilder(name);
@@ -50,4 +49,4 @@ const Definition = {
 
 export default Definition;
 
-export type Props = Zod.infer<typeof Definition.schema>;
+export type Props = zod.infer<typeof Definition.schema>;

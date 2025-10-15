@@ -13,7 +13,6 @@
   "devDependencies": {
     "@alfons-app/eslint-config": "0.19.0",
     "@alfons-app/sandbox": "0.19.0",
-    "@bory875/effects-timer": "link:",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react": "^16.3.0",
@@ -61,17 +60,27 @@
       "!**/node_modules/**"
     ]
   },
-  "license": "",
-  "name": "@bory875/effects-timer",
+  "license": "MIT",
+  "description": "Advanced timer effect plugin for Alfons framework with pause/resume functionality",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist/"],
+  "homepage": "https://github.com/IdBioAI/TimerEffect/tree/master/timer-effect",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IdBioAI/TimerEffect/tree/master/timer-effect"
+  },
+  "name": "@jaroslav-vondrak/timer-effect",
   "peerDependencies": {
     "react": "19.1.0"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/",
-    "scope": "bory875"
+    "scope": "jaroslav-vondrak"
   },
   "scripts": {
+    "build": "tsc",
     "lint": "eslint . --fix",
     "sandbox": "sandbox",
     "test": "jest --silent",

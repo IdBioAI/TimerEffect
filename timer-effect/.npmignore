@@ -1,0 +1,9 @@
+src/
+*.test.*
+__mocks__/
+babel.config.js
+tsconfig.json
+.eslintrc*
+jest.config*
+.sandbox/
+*.md

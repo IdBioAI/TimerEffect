@@ -45,3 +45,5 @@ Each chart item contains:
 - `value`: Numeric value for bar height
 - `label`: Text label displayed on X-axis
 - `color`: Optional custom color (hex format)
+
+[![Ukazkove video](img.png)](video.mp4)
