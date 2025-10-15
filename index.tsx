@@ -9,8 +9,8 @@ const TimerEffect: Effect<Props> = memo((props) => {
     const {getAction} = useContext(ActionContext);
 
     // timers ref
-    const timerRef = useRef<NodeJS.Timeout | null>(null);
-    const displayTimerRef = useRef<NodeJS.Timeout | null>(null);
+    const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const displayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const isRunning = useRef(true);
     const startTime = useRef<number>(0);
@@ -124,10 +124,7 @@ const TimerEffect: Effect<Props> = memo((props) => {
 
     useEffect(() => {
         updateTimeoutValue();
-        // Only reset if timer is currently running
-        if (isRunning.current) {
-            resetTimer();
-        }
+        resetTimer();
     }, [props.interval, props.unit, props.repeat]);
 
     return (
