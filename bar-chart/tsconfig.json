@@ -1,5 +1,18 @@
 {
-  "exclude": ["**/node_modules", ".out", "dist"],
-  "extends": "@alfons-app/pdk/tsconfig.json",
-  "include": ["alfons-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["index.tsx", "editor.tsx", "control/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.*", "__mocks__"]
 }

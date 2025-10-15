@@ -2,6 +2,7 @@ import { type AlfonsControl } from '@alfons-app/pdk';
 import type { barDataItem as TBarDataItem } from 'react-native-gifted-charts';
 import { useFieldArray, Controller } from 'react-hook-form';
 import { Add20Filled, Delete20Filled } from '@fluentui/react-icons';
+import React from "react";
 
 const BarChartValuesControl: AlfonsControl<TBarDataItem> = ({ fieldProps }) => {
 

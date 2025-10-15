@@ -1,8 +1,8 @@
-import {type PluginDefinition, createSchemaBuilder, InspectorTabs} from '@alfons-app/pdk';
+import {type PluginDefinition, createSchemaBuilder, InspectorTabs, zod} from '@alfons-app/pdk';
 import {name} from './package.json';
-import type Zod from 'zod';
 import {ChartMultipleRegular} from "@fluentui/react-icons";
 import BarChartValuesControl from "./control/BarChartControl";
+import React from "react";
 
 const $ = createSchemaBuilder(name);
 
@@ -73,5 +73,5 @@ const Definition = {
 
 export default Definition;
 
-export type Props = Zod.infer<typeof Definition.schema>;
+export type Props = zod.infer<typeof Definition.schema>;
 

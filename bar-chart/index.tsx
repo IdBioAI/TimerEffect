@@ -1,6 +1,7 @@
 import {type Effect} from "@alfons-app/pdk";
 import type {Props} from "./editor";
 import { BarChart } from 'react-native-gifted-charts';
+import React from "react";
 
 const TimerEffect: Effect<Props> = (props) => {
     return (
@@ -27,7 +28,7 @@ const TimerEffect: Effect<Props> = (props) => {
                 rotateLabel={props.textRotate}
                 spacing={60}
                 barWidth={30}
-                xAxisLabelWidth={80}
+                yAxisLabelWidth={80}
             />
 
             <div style={{ marginTop: 10, textAlign: 'right', fontSize: 14, fontWeight: 'bold', color: '#f49090' }}>

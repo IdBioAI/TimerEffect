@@ -1,6 +1,29 @@
 {
   "alfons": true,
   "author": "Jaroslav Vonrák",
+  "license": "MIT",
+  "name": "@jaroslav-vondrak/bar-chart",
+  "version": "1.0.1",
+  "description": "Bar Chart Element Plugin for Alfons framework",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "locales/",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "alfons",
+    "plugin",
+    "bar-chart",
+    "react-native"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IdBioAI/TimerEffect/tree/master/bar-chart"
+  },
+  "homepage": "https://github.com/IdBioAI/TimerEffect/tree/master/bar-chart",
   "dependencies": {
     "@alfons-app/pdk": "0.19.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
@@ -16,7 +39,6 @@
   "devDependencies": {
     "@alfons-app/eslint-config": "0.19.0",
     "@alfons-app/sandbox": "0.19.0",
-    "@jaroslav-vondrak/bar-chart": "link:",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react": "^16.3.0",
@@ -64,8 +86,6 @@
       "!**/node_modules/**"
     ]
   },
-  "license": "",
-  "name": "@jaroslav-vondrak/bar-chart",
   "peerDependencies": {
     "react": "19.1.0"
   },
@@ -82,7 +102,8 @@
     "typecheck": "tsc",
     "version:patch": "pnpm version patch --git-tag-version=false",
     "version:minor": "pnpm version minor --git-tag-version=false",
-    "version:major": "pnpm version major --git-tag-version=false"
-  },
-  "version": "1.0.1"
+    "version:major": "pnpm version major --git-tag-version=false",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  }
 }

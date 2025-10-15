@@ -1,0 +1,15 @@
+src/
+*.test.*
+*.spec.*
+.sandbox/
+node_modules/
+.idea/
+.git/
+bun.lock
+pnpm-lock.yaml
+babel.config.js
+jest.config.js
+__mocks__/
+index.test.tsx
+tsconfig.json
+presets.json
